@@ -1,12 +1,18 @@
-# 🏥 Hospital Management System (SQL-Based)
+# 🏥 Hospital Management System (JDBC + SQL)
 
 ## 📌 Overview
-This project is a relational database-driven Hospital Management System designed to streamline operations such as patient registration, doctor scheduling, appointment tracking, billing, and medical records. Built entirely using SQL, it emphasizes data integrity, modular schema design, and efficient query handling.
+This project is a Java-based Hospital Management System that uses JDBC to interact with a relational SQL database. It provides core hospital functionalities like patient registration, doctor scheduling, appointment tracking, and billing—all through modular Java classes and secure SQL queries.
 
 ## 🧱 Features
-- 👨‍⚕️ **Doctor Management**: Add, update, and view doctor profiles, specialties, and availability.
-- 🧑‍🦽 **Patient Records**: Maintain detailed patient information including demographics, medical history, and visit logs.
-- 📅 **Appointments**: Schedule, update, and cancel appointments with conflict checks.
+- 👨‍⚕️ **Doctor Management**: Add, update, and retrieve doctor profiles and availability.
+- 🧑‍🦽 **Patient Records**: Store and manage patient details and medical history.
+- 📅 **Appointments**: Book, update, and cancel appointments with conflict resolution.
+
+
+## 🛠️ Technologies Used
+- **Java (JDK 8+)**
+- **JDBC API**
+- **MySQL / PostgreSQL / SQLite**
 
 ## 🗃️ Database Schema
 
@@ -16,30 +22,49 @@ This project is a relational database-driven Hospital Management System designed
 | `Patients`       | Stores patient personal and medical data    |
 | `Appointments`   | Links patients with doctors and time slots  |
 
-## 🛠️ Technologies Used
-- **SQL (MySQL / PostgreSQL / SQLite)** – Core database logic
-- **ER Diagrams** – For schema visualization
-
 
 ## 🚀 Getting Started
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/vedant1780/hospital-management-sql.git
+git clone https://github.com/your-username/hospital-management-jdbc.git
 cd Hospital-Management-System
 ```
-### 2. Import the SQL Schema
-Use your preferred SQL client to import the hospital_schema.sql file.
-### 3. Run Sample Queries
-Try out the queries in sample_queries.sql to test the system.
-### 4. Customize
-Modify the schema or queries to suit your hospital’s specific needs
-## Folder Structure
+### 2. Setup Database
+- Import hospital_schema.sql into your SQL database.
+- Update DBConfig.java with your database credentials.
+### 3. Compile and Run
+```bash
+javac -cp .:mysql-connector-java.jar Main.java
+java -cp .:mysql-connector-java.jar Main
 ```
+### 4. Sample JDBC Connection
+```java
+Connection conn = DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/hospital_db", "username", "password");
+
+PreparedStatement stmt = conn.prepareStatement(
+    "SELECT * FROM Doctors WHERE department = ?");
+stmt.setString(1, "Cardiology");
+
+ResultSet rs = stmt.executeQuery();
+while (rs.next()) {
+    System.out.println("Dr. " + rs.getString("name"));
+}
+```
+### 📂 Folder Structure
+```
+├── src/
+│   ├── Main.java
+│   ├── DBConfig.java
+│   ├── models/
+│   │   ├── Doctors.java
+│   │   ├── Patient.java
+│   │   └── Appointment.java
 ├── hospital_schema.sql
-├── sample_queries.sql
-├── ER_diagram.png
 ├── README.md
-└── docs/
-    └── schema_explanation.md
-````
+└── lib/
+    └── mysql-connector-java.jar
+```
+
+
