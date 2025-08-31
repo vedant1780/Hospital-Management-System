@@ -30,9 +30,9 @@ cd Hospital-Management-System
 ```
 ### 2. Import the SQL Schema
 Use your preferred SQL client to import the hospital_schema.sql file.
-#### 3. Run Sample Queries
+### 3. Run Sample Queries
 Try out the queries in sample_queries.sql to test the system.
-#### 4. Customize
+### 4. Customize
 Modify the schema or queries to suit your hospital’s specific needs
 ## Folder Structure
 ```
