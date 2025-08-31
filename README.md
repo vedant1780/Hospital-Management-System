@@ -19,7 +19,7 @@ This project is a relational database-driven Hospital Management System designed
 ## 🛠️ Technologies Used
 - **SQL (MySQL / PostgreSQL / SQLite)** – Core database logic
 - **ER Diagrams** – For schema visualization
-- *(Optional)* Integration-ready with Python, Java, or Flutter for frontend/backend
+
 
 ## 🚀 Getting Started
 
