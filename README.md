@@ -7,10 +7,6 @@ This project is a relational database-driven Hospital Management System designed
 - 👨‍⚕️ **Doctor Management**: Add, update, and view doctor profiles, specialties, and availability.
 - 🧑‍🦽 **Patient Records**: Maintain detailed patient information including demographics, medical history, and visit logs.
 - 📅 **Appointments**: Schedule, update, and cancel appointments with conflict checks.
-- 💊 **Treatment & Diagnosis**: Record diagnoses, prescribed medications, and treatment plans.
-- 💳 **Billing System**: Generate invoices based on treatments, consultations, and services.
-- 🏥 **Departmental Structure**: Organize hospital departments and assign doctors accordingly.
-- 📈 **Reports & Analytics**: Query-based insights on patient visits, revenue, and doctor performance.
 
 ## 🗃️ Database Schema
 
@@ -29,5 +25,21 @@ This project is a relational database-driven Hospital Management System designed
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/hospital-management-sql.git
+git clone https://github.com/vedant1780/hospital-management-sql.git
 cd hospital-management-sql
+```
+### 2. Import the SQL Schema
+Use your preferred SQL client to import the hospital_schema.sql file.
+#### 3. Run Sample Queries
+Try out the queries in sample_queries.sql to test the system.
+#### 4. Customize
+Modify the schema or queries to suit your hospital’s specific needs
+## Folder Structure
+```
+├── hospital_schema.sql
+├── sample_queries.sql
+├── ER_diagram.png
+├── README.md
+└── docs/
+    └── schema_explanation.md
+````
