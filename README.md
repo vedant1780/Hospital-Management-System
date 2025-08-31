@@ -26,7 +26,7 @@ This project is a relational database-driven Hospital Management System designed
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/vedant1780/hospital-management-sql.git
-cd hospital-management-sql
+cd Hospital-Management-System
 ```
 ### 2. Import the SQL Schema
 Use your preferred SQL client to import the hospital_schema.sql file.
